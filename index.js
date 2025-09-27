@@ -2,6 +2,8 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./database/db"); // DB connection file
 const userRouter = require("./routes/userRouter"); // your user routes
+const memberShipRouter = require("./routes/memberShipRouter"); 
+const trainerRouter = require("./routes/trainerRouter");
 
 dotenv.config();
 const app = express();
@@ -13,6 +15,8 @@ app.use(express.json());
 
 // Routes
 app.use("/api/user", userRouter);
+app.use("/api/membership", memberShipRouter);//membership router
+app.use("/api/trainers", trainerRouter);   // Trainer CRUD
 
 // Connect Database
 connectDB();
