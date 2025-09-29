@@ -23,7 +23,7 @@
 
     // Delete a trainer by ID (Admin only)
     router.delete(
-    "delete/:id",
+    "/delete/:id",
     verifyToken,
     authorizeRoles("admin"),
     trainerController.deleteTrainerController

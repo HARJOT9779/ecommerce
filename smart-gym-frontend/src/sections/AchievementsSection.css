@@ -1,0 +1,58 @@
+.achievements-section {
+  background: #0a0a0a;
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.achievements-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #f87171;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #1f1f1f, #4b0000);
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(248, 113, 113, 0.7);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+}

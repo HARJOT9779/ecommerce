@@ -8,9 +8,9 @@ const userSchema = new mongoose.Schema(
     phone: { type: String, required: true, unique: true },
     password: { type: String, required: true, minlength: 6 },
     gender: { type: String, enum: ["male", "female", "other"] },
-    age: { type: Number },
-    height: { type: Number },
-    weight: { type: Number },
+    age: { type: Number, required: true },
+    height: { type: Number, required: true },
+    weight: { type: Number, required: true },
     joinDate: { type: Date, default: Date.now },
 
     // Role

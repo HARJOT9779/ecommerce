@@ -1,0 +1,76 @@
+.perspective {
+  perspective: 1000px;
+}
+
+.quiz-card {
+  width: 100%;
+  height: 20rem; /* fixed height */
+  perspective: 1000px;
+}
+
+.quiz-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.quiz-card.flipped .quiz-card-inner {
+  transform: rotateY(180deg);
+}
+
+.quiz-card-front,
+.quiz-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem; /* rounded corners */
+  padding: 1rem; /* padding to prevent overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; /* include padding in size */
+}
+
+.quiz-card-front {
+  background: linear-gradient(135deg, #1f1f1f, #4b0000);
+  color: white;
+}
+
+.quiz-card-back {
+  background: rgba(0,0,0,0.9); /* semi-transparent black */
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+button.option-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  width: 100%; /* make button fit card width */
+}
+
+button.option-btn:hover {
+  transform: scale(1.05);
+}
+
+.correct {
+  background-color: #16a34a; /* green */
+  color: white;
+}
+
+.incorrect {
+  background-color: #dc2626; /* red */
+  color: white;
+}
